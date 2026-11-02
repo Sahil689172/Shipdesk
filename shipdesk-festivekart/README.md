@@ -284,3 +284,9 @@ All FestiveKart branding, design, and content is original.
 ---
 
 *FestiveKart — Shop Every Celebration*
+## ShipDesk Workflow Test
+
+This change verifies the GitHub feature branch and pull request workflow.
+
+Task ID: SD-001
+Purpose: Test Cloudflare Pages preview deployments.

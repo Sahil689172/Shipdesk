@@ -26,7 +26,7 @@
 <body>
 
   <!-- ============================================================
-       HEADER – Primary navigation bar with logo, search, and actions
+       HEADER
        ============================================================ -->
   <header id="site-header" class="site-header" role="banner">
     <div class="header-inner container">
@@ -52,7 +52,6 @@
             autocomplete="off"
           />
           <button type="submit" class="search-btn" aria-label="Submit search">
-            <!-- Search Icon (inline SVG) -->
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
               <circle cx="11" cy="11" r="8"></circle>
               <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
@@ -61,10 +60,9 @@
         </form>
       </div>
 
-      <!-- Header Actions: Login & Cart -->
+      <!-- Header Actions -->
       <div class="header-actions" id="header-actions">
 
-        <!-- Login Button -->
         <div class="header-action-item" id="header-login">
           <button class="btn btn-login" aria-label="Login or signup to your account">
             <span class="btn-login-text">Login</span>
@@ -72,22 +70,17 @@
           </button>
         </div>
 
-        <!-- Become a Seller -->
         <div class="header-action-item header-action-text" id="header-seller">
           <a href="#" class="header-link" aria-label="Become a seller on FestiveKart">Become a Seller</a>
         </div>
 
-        <!-- More / Help -->
         <div class="header-action-item header-action-text" id="header-more">
           <a href="#" class="header-link" aria-label="Help and support">
             More
-            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
-              <path d="M7 10l5 5 5-5z"/>
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M7 10l5 5 5-5z"/></svg>
           </a>
         </div>
 
-        <!-- Cart -->
         <div class="header-action-item" id="header-cart">
           <a href="#cart-section" class="header-cart-link" aria-label="View shopping cart">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
@@ -96,17 +89,17 @@
               <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
             </svg>
             <span class="cart-label">Cart</span>
-            <span class="cart-count" id="cart-count" aria-live="polite">0</span>
+            <span class="cart-count" id="cart-count" aria-live="polite"></span>
           </a>
         </div>
 
-      </div><!-- /header-actions -->
-    </div><!-- /header-inner -->
+      </div>
+    </div>
   </header>
 
 
   <!-- ============================================================
-       CATEGORY NAV – Horizontal product category navigation
+       CATEGORY NAV
        ============================================================ -->
   <nav id="category-nav" class="category-nav" aria-label="Product categories">
     <div class="container">
@@ -115,8 +108,7 @@
         <li class="category-item">
           <a href="#" class="category-link" aria-label="Electronics">
             <span class="category-icon" aria-hidden="true">
-              <!-- Electronics icon -->
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
             </span>
             <span class="category-label">Electronics</span>
           </a>
@@ -125,7 +117,7 @@
         <li class="category-item">
           <a href="#" class="category-link" aria-label="Fashion">
             <span class="category-icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.38 3.46L16 2a4 4 0 01-8 0L3.62 3.46a2 2 0 00-1.34 2.23l.58 3.57a1 1 0 00.99.86H6v10c0 1.1.9 2 2 2h8a2 2 0 002-2V10h2.15a1 1 0 00.99-.86l.58-3.57a2 2 0 00-1.34-2.23z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.38 3.46L16 2a4 4 0 01-8 0L3.62 3.46a2 2 0 00-1.34 2.23l.58 3.57a1 1 0 00.99.86H6v10c0 1.1.9 2 2 2h8a2 2 0 002-2V10h2.15a1 1 0 00.99-.86l.58-3.57a2 2 0 00-1.34-2.23z"/></svg>
             </span>
             <span class="category-label">Fashion</span>
           </a>
@@ -134,7 +126,7 @@
         <li class="category-item">
           <a href="#" class="category-link" aria-label="Home and Furniture">
             <span class="category-icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
             </span>
             <span class="category-label">Home &amp; Furniture</span>
           </a>
@@ -143,7 +135,7 @@
         <li class="category-item">
           <a href="#" class="category-link" aria-label="Appliances">
             <span class="category-icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
             </span>
             <span class="category-label">Appliances</span>
           </a>
@@ -152,7 +144,7 @@
         <li class="category-item">
           <a href="#" class="category-link" aria-label="Beauty and Personal Care">
             <span class="category-icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
             </span>
             <span class="category-label">Beauty</span>
           </a>
@@ -161,7 +153,7 @@
         <li class="category-item">
           <a href="#" class="category-link" aria-label="Books and Stationery">
             <span class="category-icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
             </span>
             <span class="category-label">Books</span>
           </a>
@@ -170,7 +162,7 @@
         <li class="category-item">
           <a href="#" class="category-link" aria-label="Toys and Games">
             <span class="category-icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
             </span>
             <span class="category-label">Toys</span>
           </a>
@@ -179,7 +171,7 @@
         <li class="category-item">
           <a href="#" class="category-link" aria-label="Sports and Fitness">
             <span class="category-icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M4.93 4.93l14.14 14.14"/><path d="M19.07 4.93L4.93 19.07"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M4.93 4.93l14.14 14.14"/><path d="M19.07 4.93L4.93 19.07"/></svg>
             </span>
             <span class="category-label">Sports</span>
           </a>
@@ -188,7 +180,7 @@
         <li class="category-item">
           <a href="#" class="category-link" aria-label="Grocery and Food">
             <span class="category-icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
             </span>
             <span class="category-label">Grocery</span>
           </a>
@@ -197,7 +189,7 @@
         <li class="category-item">
           <a href="#" class="category-link" aria-label="Two-Wheelers and Vehicles">
             <span class="category-icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M15 6h-5l-3 8h13l-2-6a2 2 0 00-2-2z"/><path d="M18 10h-2"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M15 6h-5l-3 8h13l-2-6a2 2 0 00-2-2z"/><path d="M18 10h-2"/></svg>
             </span>
             <span class="category-label">Vehicles</span>
           </a>
@@ -215,74 +207,64 @@
     <div class="container">
 
       <!-- ----------------------------------------------------------
-           HERO / CAROUSEL SECTION – Promotional banner carousel
+           HERO / CAROUSEL SECTION – uses real banner images
            ---------------------------------------------------------- -->
       <section id="hero-section" class="hero-section" aria-label="Promotional offers and featured deals">
         <div class="hero-carousel" id="hero-carousel" role="region" aria-label="Featured promotions carousel" aria-live="polite">
 
-          <!-- Carousel Track -->
           <div class="carousel-track" id="carousel-track">
 
-            <div class="carousel-slide" id="carousel-slide-1" role="group" aria-roledescription="slide" aria-label="Slide 1 of 4: Diwali Sale">
-              <div class="carousel-slide-content banner-diwali">
-                <div class="banner-text-block">
-                  <p class="banner-eyebrow">🪔 Diwali Mega Sale</p>
-                  <h2 class="banner-heading">Up to 80% Off</h2>
-                  <p class="banner-sub">On Electronics, Fashion & Home Decor</p>
-                  <a href="#" class="btn btn-action banner-cta">Shop Now</a>
-                </div>
+            <!-- Slide 1 – banner1.png -->
+            <div class="carousel-slide" id="carousel-slide-1" role="group" aria-roledescription="slide" aria-label="Slide 1 of 3">
+              <div class="carousel-slide-img-wrap">
+                <img
+                  src="assets/images/banners/banner1.png"
+                  alt="Diwali Mega Sale – Up to 80% off on Electronics, Fashion and Home Decor"
+                  class="carousel-banner-img"
+                  loading="eager"
+                />
               </div>
             </div>
 
-            <div class="carousel-slide" id="carousel-slide-2" role="group" aria-roledescription="slide" aria-label="Slide 2 of 4: New Arrivals">
-              <div class="carousel-slide-content banner-arrivals">
-                <div class="banner-text-block">
-                  <p class="banner-eyebrow">✨ New Arrivals</p>
-                  <h2 class="banner-heading">Festive Fashion 2026</h2>
-                  <p class="banner-sub">Sarees, Kurtas & Designer Wear</p>
-                  <a href="#" class="btn btn-action banner-cta">Explore Now</a>
-                </div>
+            <!-- Slide 2 – banner2.png -->
+            <div class="carousel-slide" id="carousel-slide-2" role="group" aria-roledescription="slide" aria-label="Slide 2 of 3">
+              <div class="carousel-slide-img-wrap">
+                <img
+                  src="assets/images/banners/banner2.png"
+                  alt="Festive Fashion 2026 – New arrivals in Sarees, Kurtas and Designer Wear"
+                  class="carousel-banner-img"
+                  loading="lazy"
+                />
               </div>
             </div>
 
-            <div class="carousel-slide" id="carousel-slide-3" role="group" aria-roledescription="slide" aria-label="Slide 3 of 4: Electronics Deals">
-              <div class="carousel-slide-content banner-electronics">
-                <div class="banner-text-block">
-                  <p class="banner-eyebrow">📱 Best in Electronics</p>
-                  <h2 class="banner-heading">Smartphones from ₹6,999</h2>
-                  <p class="banner-sub">Top brands, EMI options available</p>
-                  <a href="#" class="btn btn-action banner-cta">Buy Now</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="carousel-slide" id="carousel-slide-4" role="group" aria-roledescription="slide" aria-label="Slide 4 of 4: Home Decor">
-              <div class="carousel-slide-content banner-home">
-                <div class="banner-text-block">
-                  <p class="banner-eyebrow">🏠 Home Makeover</p>
-                  <h2 class="banner-heading">Decor from ₹299</h2>
-                  <p class="banner-sub">Lights, Diyas, Rangoli & More</p>
-                  <a href="#" class="btn btn-action banner-cta">Discover</a>
-                </div>
+            <!-- Slide 3 – banner3.png -->
+            <div class="carousel-slide" id="carousel-slide-3" role="group" aria-roledescription="slide" aria-label="Slide 3 of 3">
+              <div class="carousel-slide-img-wrap">
+                <img
+                  src="assets/images/banners/banner3.png"
+                  alt="Best in Electronics – Smartphones from Rs 6999 with EMI options"
+                  class="carousel-banner-img"
+                  loading="lazy"
+                />
               </div>
             </div>
 
           </div><!-- /carousel-track -->
 
-          <!-- Carousel Controls -->
+          <!-- Controls -->
           <button class="carousel-btn carousel-btn-prev" id="carousel-prev" aria-label="Previous slide">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
           </button>
           <button class="carousel-btn carousel-btn-next" id="carousel-next" aria-label="Next slide">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
           </button>
 
-          <!-- Carousel Indicators -->
+          <!-- Indicators -->
           <div class="carousel-indicators" id="carousel-indicators" role="tablist" aria-label="Carousel slide indicators">
-            <button class="carousel-dot active" role="tab" aria-selected="true" aria-label="Go to slide 1" data-slide="0"></button>
-            <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Go to slide 2" data-slide="1"></button>
-            <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Go to slide 3" data-slide="2"></button>
-            <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Go to slide 4" data-slide="3"></button>
+            <button class="carousel-dot active" role="tab" aria-selected="true"  aria-label="Go to slide 1" data-slide="0"></button>
+            <button class="carousel-dot"        role="tab" aria-selected="false" aria-label="Go to slide 2" data-slide="1"></button>
+            <button class="carousel-dot"        role="tab" aria-selected="false" aria-label="Go to slide 3" data-slide="2"></button>
           </div>
 
         </div><!-- /hero-carousel -->
@@ -291,6 +273,7 @@
 
       <!-- ----------------------------------------------------------
            FEATURED PRODUCTS SECTION
+           Products: earbuds, watch, laptop, iphone, tv (primary images only)
            ---------------------------------------------------------- -->
       <section id="featured-products" class="section featured-products-section" aria-labelledby="featured-products-heading">
         <div class="section-header">
@@ -299,13 +282,16 @@
         </div>
         <div class="product-grid" id="featured-products-grid" role="list" aria-label="Featured products">
 
-          <!-- Product Card 1 -->
+          <!-- Earbuds -->
           <article class="product-card" role="listitem" aria-label="Product: Wireless Earbuds Pro">
             <a href="#" class="product-card-link" aria-label="View Wireless Earbuds Pro details">
               <div class="product-image-wrapper">
-                <div class="product-image-placeholder" aria-hidden="true">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-                </div>
+                <img
+                  src="assets/images/products/earbuds.png"
+                  alt="Wireless Earbuds Pro"
+                  class="product-img"
+                  loading="lazy"
+                />
               </div>
               <div class="product-info">
                 <h3 class="product-title">Wireless Earbuds Pro</h3>
@@ -314,67 +300,24 @@
                   <span class="rating-count">(2,841)</span>
                 </div>
                 <div class="product-pricing">
-                  <span class="product-price" aria-label="Current price: 1499 rupees">₹1,499</span>
-                  <span class="product-mrp" aria-label="Original price: 4999 rupees"><s>₹4,999</s></span>
-                  <span class="product-discount" aria-label="70% discount">70% off</span>
+                  <span class="product-price">₹1,499</span>
+                  <span class="product-mrp"><s>₹4,999</s></span>
+                  <span class="product-discount">70% off</span>
                 </div>
               </div>
             </a>
           </article>
 
-          <!-- Product Card 2 -->
-          <article class="product-card" role="listitem" aria-label="Product: Silk Blend Saree">
-            <a href="#" class="product-card-link" aria-label="View Silk Blend Saree details">
+          <!-- Smartwatch -->
+          <article class="product-card" role="listitem" aria-label="Product: Smart Watch Series X">
+            <a href="#" class="product-card-link" aria-label="View Smart Watch Series X details">
               <div class="product-image-wrapper">
-                <div class="product-image-placeholder" aria-hidden="true">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-                </div>
-              </div>
-              <div class="product-info">
-                <h3 class="product-title">Silk Blend Festive Saree</h3>
-                <div class="product-rating">
-                  <span class="rating-badge" aria-label="Rating: 4.5 out of 5">4.5 ★</span>
-                  <span class="rating-count">(1,203)</span>
-                </div>
-                <div class="product-pricing">
-                  <span class="product-price" aria-label="Current price: 899 rupees">₹899</span>
-                  <span class="product-mrp" aria-label="Original price: 2499 rupees"><s>₹2,499</s></span>
-                  <span class="product-discount" aria-label="64% discount">64% off</span>
-                </div>
-              </div>
-            </a>
-          </article>
-
-          <!-- Product Card 3 -->
-          <article class="product-card" role="listitem" aria-label="Product: LED String Lights">
-            <a href="#" class="product-card-link" aria-label="View LED String Lights details">
-              <div class="product-image-wrapper">
-                <div class="product-image-placeholder" aria-hidden="true">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-                </div>
-              </div>
-              <div class="product-info">
-                <h3 class="product-title">LED Diwali String Lights – 10m</h3>
-                <div class="product-rating">
-                  <span class="rating-badge" aria-label="Rating: 4.2 out of 5">4.2 ★</span>
-                  <span class="rating-count">(5,672)</span>
-                </div>
-                <div class="product-pricing">
-                  <span class="product-price" aria-label="Current price: 299 rupees">₹299</span>
-                  <span class="product-mrp" aria-label="Original price: 799 rupees"><s>₹799</s></span>
-                  <span class="product-discount" aria-label="63% discount">63% off</span>
-                </div>
-              </div>
-            </a>
-          </article>
-
-          <!-- Product Card 4 -->
-          <article class="product-card" role="listitem" aria-label="Product: Smart Watch">
-            <a href="#" class="product-card-link" aria-label="View Smart Watch details">
-              <div class="product-image-wrapper">
-                <div class="product-image-placeholder" aria-hidden="true">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-                </div>
+                <img
+                  src="assets/images/products/watch.png"
+                  alt="Smart Watch Series X"
+                  class="product-img"
+                  loading="lazy"
+                />
               </div>
               <div class="product-info">
                 <h3 class="product-title">Smart Watch Series X</h3>
@@ -383,78 +326,164 @@
                   <span class="rating-count">(9,120)</span>
                 </div>
                 <div class="product-pricing">
-                  <span class="product-price" aria-label="Current price: 2499 rupees">₹2,499</span>
-                  <span class="product-mrp" aria-label="Original price: 6999 rupees"><s>₹6,999</s></span>
-                  <span class="product-discount" aria-label="64% discount">64% off</span>
+                  <span class="product-price">₹2,499</span>
+                  <span class="product-mrp"><s>₹6,999</s></span>
+                  <span class="product-discount">64% off</span>
                 </div>
               </div>
             </a>
           </article>
 
-          <!-- Product Card 5 -->
-          <article class="product-card" role="listitem" aria-label="Product: Kurta Set">
-            <a href="#" class="product-card-link" aria-label="View Kurta Set details">
+          <!-- Laptop -->
+          <article class="product-card" role="listitem" aria-label="Product: Pro Laptop 15 inch">
+            <a href="#" class="product-card-link" aria-label="View Pro Laptop 15 inch details">
               <div class="product-image-wrapper">
-                <div class="product-image-placeholder" aria-hidden="true">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-                </div>
+                <img
+                  src="assets/images/products/laptop.png"
+                  alt="Pro Laptop 15 inch"
+                  class="product-img"
+                  loading="lazy"
+                />
               </div>
               <div class="product-info">
-                <h3 class="product-title">Men's Festive Kurta Set</h3>
+                <h3 class="product-title">Pro Laptop 15"</h3>
                 <div class="product-rating">
-                  <span class="rating-badge" aria-label="Rating: 4.1 out of 5">4.1 ★</span>
-                  <span class="rating-count">(3,456)</span>
+                  <span class="rating-badge" aria-label="Rating: 4.5 out of 5">4.5 ★</span>
+                  <span class="rating-count">(4,210)</span>
                 </div>
                 <div class="product-pricing">
-                  <span class="product-price" aria-label="Current price: 699 rupees">₹699</span>
-                  <span class="product-mrp" aria-label="Original price: 1999 rupees"><s>₹1,999</s></span>
-                  <span class="product-discount" aria-label="65% discount">65% off</span>
+                  <span class="product-price">₹42,999</span>
+                  <span class="product-mrp"><s>₹65,000</s></span>
+                  <span class="product-discount">34% off</span>
                 </div>
               </div>
             </a>
           </article>
 
-        </div><!-- /featured-products-grid -->
+          <!-- iPhone -->
+          <article class="product-card" role="listitem" aria-label="Product: iPhone 15">
+            <a href="#" class="product-card-link" aria-label="View iPhone 15 details">
+              <div class="product-image-wrapper">
+                <img
+                  src="assets/images/products/iphone.png"
+                  alt="iPhone 15"
+                  class="product-img"
+                  loading="lazy"
+                />
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">iPhone 15</h3>
+                <div class="product-rating">
+                  <span class="rating-badge" aria-label="Rating: 4.7 out of 5">4.7 ★</span>
+                  <span class="rating-count">(18,340)</span>
+                </div>
+                <div class="product-pricing">
+                  <span class="product-price">₹69,999</span>
+                  <span class="product-mrp"><s>₹79,999</s></span>
+                  <span class="product-discount">13% off</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- TV -->
+          <article class="product-card" role="listitem" aria-label="Product: 4K Smart LED TV 55 inch">
+            <a href="#" class="product-card-link" aria-label="View 4K Smart LED TV 55 inch details">
+              <div class="product-image-wrapper">
+                <img
+                  src="assets/images/products/tv.png"
+                  alt="4K Smart LED TV 55 inch"
+                  class="product-img"
+                  loading="lazy"
+                />
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">4K Smart LED TV 55"</h3>
+                <div class="product-rating">
+                  <span class="rating-badge" aria-label="Rating: 4.3 out of 5">4.3 ★</span>
+                  <span class="rating-count">(7,654)</span>
+                </div>
+                <div class="product-pricing">
+                  <span class="product-price">₹34,999</span>
+                  <span class="product-mrp"><s>₹55,000</s></span>
+                  <span class="product-discount">36% off</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+        </div>
       </section>
 
 
       <!-- ----------------------------------------------------------
-           PRODUCT CATEGORIES SECTION
+           SHOP BY BRAND SECTION
            ---------------------------------------------------------- -->
-      <section id="product-categories" class="section product-categories-section" aria-labelledby="product-categories-heading">
+      <section id="brand-section" class="section brand-section" aria-labelledby="brand-heading">
         <div class="section-header">
-          <h2 class="section-title" id="product-categories-heading">Shop by Category</h2>
+          <h2 class="section-title" id="brand-heading">Shop by Brand</h2>
+          <a href="#" class="section-view-all" aria-label="View all brands">View All</a>
         </div>
-        <div class="categories-grid" id="categories-grid">
+        <div class="brand-grid" id="brand-grid" role="list" aria-label="Shop by brand">
 
-          <a href="#" class="category-card" aria-label="Shop Electronics">
-            <div class="category-card-image category-electronics" aria-hidden="true"></div>
-            <p class="category-card-label">Electronics</p>
+          <a href="#" class="brand-card" role="listitem" aria-label="Shop Apple products">
+            <div class="brand-logo-wrap">
+              <img
+                src="assets/images/brand/apple.png"
+                alt="Apple"
+                class="brand-logo-img"
+                loading="lazy"
+              />
+            </div>
+            <span class="brand-name">Apple</span>
           </a>
 
-          <a href="#" class="category-card" aria-label="Shop Fashion">
-            <div class="category-card-image category-fashion" aria-hidden="true"></div>
-            <p class="category-card-label">Fashion</p>
+          <a href="#" class="brand-card" role="listitem" aria-label="Shop Nike products">
+            <div class="brand-logo-wrap">
+              <img
+                src="assets/images/brand/nike.png"
+                alt="Nike"
+                class="brand-logo-img"
+                loading="lazy"
+              />
+            </div>
+            <span class="brand-name">Nike</span>
           </a>
 
-          <a href="#" class="category-card" aria-label="Shop Home Decor">
-            <div class="category-card-image category-home" aria-hidden="true"></div>
-            <p class="category-card-label">Home Decor</p>
+          <a href="#" class="brand-card" role="listitem" aria-label="Shop Adidas products">
+            <div class="brand-logo-wrap">
+              <img
+                src="assets/images/brand/addidas.png"
+                alt="Adidas"
+                class="brand-logo-img"
+                loading="lazy"
+              />
+            </div>
+            <span class="brand-name">Adidas</span>
           </a>
 
-          <a href="#" class="category-card" aria-label="Shop Appliances">
-            <div class="category-card-image category-appliances" aria-hidden="true"></div>
-            <p class="category-card-label">Appliances</p>
+          <a href="#" class="brand-card" role="listitem" aria-label="Shop HP products">
+            <div class="brand-logo-wrap">
+              <img
+                src="assets/images/brand/hp.png"
+                alt="HP"
+                class="brand-logo-img"
+                loading="lazy"
+              />
+            </div>
+            <span class="brand-name">HP</span>
           </a>
 
-          <a href="#" class="category-card" aria-label="Shop Grocery">
-            <div class="category-card-image category-grocery" aria-hidden="true"></div>
-            <p class="category-card-label">Grocery</p>
-          </a>
-
-          <a href="#" class="category-card" aria-label="Shop Toys and Games">
-            <div class="category-card-image category-toys" aria-hidden="true"></div>
-            <p class="category-card-label">Toys &amp; Games</p>
+          <a href="#" class="brand-card" role="listitem" aria-label="Shop LOQ products">
+            <div class="brand-logo-wrap">
+              <img
+                src="assets/images/brand/LOQ.png"
+                alt="LOQ"
+                class="brand-logo-img"
+                loading="lazy"
+              />
+            </div>
+            <span class="brand-name">LOQ</span>
           </a>
 
         </div>
@@ -463,6 +492,7 @@
 
       <!-- ----------------------------------------------------------
            DEALS AND OFFERS SECTION
+           Products: ps5, fridge, shoes, jacket (primary images only)
            ---------------------------------------------------------- -->
       <section id="deals-section" class="section deals-section" aria-labelledby="deals-heading">
         <div class="section-header">
@@ -474,54 +504,63 @@
         </div>
         <div class="deals-grid" id="deals-grid" role="list" aria-label="Today's top deals">
 
-          <!-- Deal Card 1 -->
-          <article class="deal-card" role="listitem" aria-label="Deal: Bluetooth Speaker">
-            <a href="#" class="deal-card-link" aria-label="View Bluetooth Speaker deal">
-              <div class="deal-badge" aria-label="Deal of the day">Deal of the Day</div>
+          <!-- PS5 -->
+          <article class="deal-card" role="listitem" aria-label="Deal: PlayStation 5">
+            <a href="#" class="deal-card-link" aria-label="View PlayStation 5 deal">
+              <span class="deal-badge">Deal of the Day</span>
               <div class="deal-image-wrapper">
-                <div class="product-image-placeholder" aria-hidden="true">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-                </div>
+                <img
+                  src="assets/images/products/ps5.png"
+                  alt="PlayStation 5"
+                  class="product-img"
+                  loading="lazy"
+                />
               </div>
               <div class="deal-info">
-                <h3 class="deal-title">Bluetooth Speaker 360°</h3>
+                <h3 class="deal-title">PlayStation 5</h3>
                 <div class="deal-pricing">
-                  <span class="product-price">₹999</span>
-                  <span class="product-mrp"><s>₹3,499</s></span>
+                  <span class="product-price">₹44,999</span>
+                  <span class="product-mrp"><s>₹54,999</s></span>
                 </div>
-                <div class="deal-discount-large" aria-label="71% off">71% off</div>
+                <div class="deal-discount-large">18% off</div>
               </div>
             </a>
           </article>
 
-          <!-- Deal Card 2 -->
-          <article class="deal-card" role="listitem" aria-label="Deal: Pressure Cooker">
-            <a href="#" class="deal-card-link" aria-label="View Pressure Cooker deal">
-              <div class="deal-badge" aria-label="Best seller">Best Seller</div>
+          <!-- Refrigerator -->
+          <article class="deal-card" role="listitem" aria-label="Deal: Double Door Refrigerator">
+            <a href="#" class="deal-card-link" aria-label="View Double Door Refrigerator deal">
+              <span class="deal-badge">Best Seller</span>
               <div class="deal-image-wrapper">
-                <div class="product-image-placeholder" aria-hidden="true">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-                </div>
+                <img
+                  src="assets/images/products/fridge.png"
+                  alt="Double Door Refrigerator 350L"
+                  class="product-img"
+                  loading="lazy"
+                />
               </div>
               <div class="deal-info">
-                <h3 class="deal-title">Stainless Pressure Cooker 5L</h3>
+                <h3 class="deal-title">Double Door Refrigerator 350L</h3>
                 <div class="deal-pricing">
-                  <span class="product-price">₹1,199</span>
-                  <span class="product-mrp"><s>₹2,799</s></span>
+                  <span class="product-price">₹28,999</span>
+                  <span class="product-mrp"><s>₹42,000</s></span>
                 </div>
-                <div class="deal-discount-large" aria-label="57% off">57% off</div>
+                <div class="deal-discount-large">31% off</div>
               </div>
             </a>
           </article>
 
-          <!-- Deal Card 3 -->
-          <article class="deal-card" role="listitem" aria-label="Deal: Running Shoes">
-            <a href="#" class="deal-card-link" aria-label="View Running Shoes deal">
-              <div class="deal-badge" aria-label="Hot deal">🔥 Hot</div>
+          <!-- Shoes -->
+          <article class="deal-card" role="listitem" aria-label="Deal: Pro Running Shoes">
+            <a href="#" class="deal-card-link" aria-label="View Pro Running Shoes deal">
+              <span class="deal-badge">🔥 Hot</span>
               <div class="deal-image-wrapper">
-                <div class="product-image-placeholder" aria-hidden="true">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-                </div>
+                <img
+                  src="assets/images/products/shoes.png"
+                  alt="Pro Running Shoes"
+                  class="product-img"
+                  loading="lazy"
+                />
               </div>
               <div class="deal-info">
                 <h3 class="deal-title">Pro Running Shoes – Unisex</h3>
@@ -529,32 +568,180 @@
                   <span class="product-price">₹1,799</span>
                   <span class="product-mrp"><s>₹4,499</s></span>
                 </div>
-                <div class="deal-discount-large" aria-label="60% off">60% off</div>
+                <div class="deal-discount-large">60% off</div>
               </div>
             </a>
           </article>
 
-          <!-- Deal Card 4 -->
-          <article class="deal-card" role="listitem" aria-label="Deal: Diya Gift Set">
-            <a href="#" class="deal-card-link" aria-label="View Diya Gift Set deal">
-              <div class="deal-badge" aria-label="Festive special">🪔 Festive</div>
+          <!-- Jacket -->
+          <article class="deal-card" role="listitem" aria-label="Deal: Winter Jacket">
+            <a href="#" class="deal-card-link" aria-label="View Winter Jacket deal">
+              <span class="deal-badge">🪔 Festive</span>
               <div class="deal-image-wrapper">
-                <div class="product-image-placeholder" aria-hidden="true">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-                </div>
+                <img
+                  src="assets/images/products/jacket1.png"
+                  alt="Premium Winter Jacket"
+                  class="product-img"
+                  loading="lazy"
+                />
               </div>
               <div class="deal-info">
-                <h3 class="deal-title">Decorative Diya Gift Set (12 pcs)</h3>
+                <h3 class="deal-title">Premium Winter Jacket</h3>
                 <div class="deal-pricing">
-                  <span class="product-price">₹349</span>
-                  <span class="product-mrp"><s>₹899</s></span>
+                  <span class="product-price">₹1,499</span>
+                  <span class="product-mrp"><s>₹3,999</s></span>
                 </div>
-                <div class="deal-discount-large" aria-label="61% off">61% off</div>
+                <div class="deal-discount-large">63% off</div>
               </div>
             </a>
           </article>
 
-        </div><!-- /deals-grid -->
+        </div>
+      </section>
+
+
+      <!-- ----------------------------------------------------------
+           MORE PRODUCTS SECTION
+           Products: jersey, fridge (via appliances context), ps5, shoes
+           ---------------------------------------------------------- -->
+      <section id="more-products" class="section more-products-section" aria-labelledby="more-products-heading">
+        <div class="section-header">
+          <h2 class="section-title" id="more-products-heading">More Products You'll Love</h2>
+          <a href="#" class="section-view-all" aria-label="View all products">View All</a>
+        </div>
+        <div class="product-grid" id="more-products-grid" role="list" aria-label="More products">
+
+          <!-- Jersey -->
+          <article class="product-card" role="listitem" aria-label="Product: Sports Jersey">
+            <a href="#" class="product-card-link" aria-label="View Sports Jersey details">
+              <div class="product-image-wrapper">
+                <img
+                  src="assets/images/products/jersey.png"
+                  alt="Sports Jersey"
+                  class="product-img"
+                  loading="lazy"
+                />
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Sports Jersey – Dri-Fit</h3>
+                <div class="product-rating">
+                  <span class="rating-badge" aria-label="Rating: 4.2 out of 5">4.2 ★</span>
+                  <span class="rating-count">(1,560)</span>
+                </div>
+                <div class="product-pricing">
+                  <span class="product-price">₹799</span>
+                  <span class="product-mrp"><s>₹1,999</s></span>
+                  <span class="product-discount">60% off</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- Jacket (second product) -->
+          <article class="product-card" role="listitem" aria-label="Product: Premium Winter Jacket">
+            <a href="#" class="product-card-link" aria-label="View Premium Winter Jacket details">
+              <div class="product-image-wrapper">
+                <img
+                  src="assets/images/products/jacket1.png"
+                  alt="Premium Winter Jacket"
+                  class="product-img"
+                  loading="lazy"
+                />
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Premium Winter Jacket</h3>
+                <div class="product-rating">
+                  <span class="rating-badge" aria-label="Rating: 4.3 out of 5">4.3 ★</span>
+                  <span class="rating-count">(2,100)</span>
+                </div>
+                <div class="product-pricing">
+                  <span class="product-price">₹1,499</span>
+                  <span class="product-mrp"><s>₹3,999</s></span>
+                  <span class="product-discount">63% off</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- Shoes -->
+          <article class="product-card" role="listitem" aria-label="Product: Pro Running Shoes">
+            <a href="#" class="product-card-link" aria-label="View Pro Running Shoes details">
+              <div class="product-image-wrapper">
+                <img
+                  src="assets/images/products/shoes.png"
+                  alt="Pro Running Shoes"
+                  class="product-img"
+                  loading="lazy"
+                />
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Pro Running Shoes</h3>
+                <div class="product-rating">
+                  <span class="rating-badge" aria-label="Rating: 4.4 out of 5">4.4 ★</span>
+                  <span class="rating-count">(3,890)</span>
+                </div>
+                <div class="product-pricing">
+                  <span class="product-price">₹1,799</span>
+                  <span class="product-mrp"><s>₹4,499</s></span>
+                  <span class="product-discount">60% off</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- Fridge -->
+          <article class="product-card" role="listitem" aria-label="Product: Double Door Refrigerator">
+            <a href="#" class="product-card-link" aria-label="View Double Door Refrigerator details">
+              <div class="product-image-wrapper">
+                <img
+                  src="assets/images/products/fridge.png"
+                  alt="Double Door Refrigerator 350L"
+                  class="product-img"
+                  loading="lazy"
+                />
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Double Door Refrigerator 350L</h3>
+                <div class="product-rating">
+                  <span class="rating-badge" aria-label="Rating: 4.6 out of 5">4.6 ★</span>
+                  <span class="rating-count">(6,200)</span>
+                </div>
+                <div class="product-pricing">
+                  <span class="product-price">₹28,999</span>
+                  <span class="product-mrp"><s>₹42,000</s></span>
+                  <span class="product-discount">31% off</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- PS5 -->
+          <article class="product-card" role="listitem" aria-label="Product: PlayStation 5">
+            <a href="#" class="product-card-link" aria-label="View PlayStation 5 details">
+              <div class="product-image-wrapper">
+                <img
+                  src="assets/images/products/ps5.png"
+                  alt="PlayStation 5"
+                  class="product-img"
+                  loading="lazy"
+                />
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">PlayStation 5</h3>
+                <div class="product-rating">
+                  <span class="rating-badge" aria-label="Rating: 4.8 out of 5">4.8 ★</span>
+                  <span class="rating-count">(11,450)</span>
+                </div>
+                <div class="product-pricing">
+                  <span class="product-price">₹44,999</span>
+                  <span class="product-mrp"><s>₹54,999</s></span>
+                  <span class="product-discount">18% off</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+        </div>
       </section>
 
 
@@ -593,7 +780,62 @@
 
 
       <!-- ----------------------------------------------------------
-           CART SECTION (empty state placeholder)
+           PRODUCT CATEGORIES SECTION
+           ---------------------------------------------------------- -->
+      <section id="product-categories" class="section product-categories-section" aria-labelledby="product-categories-heading">
+        <div class="section-header">
+          <h2 class="section-title" id="product-categories-heading">Shop by Category</h2>
+        </div>
+        <div class="categories-grid" id="categories-grid">
+
+          <a href="#" class="category-card" aria-label="Shop Electronics">
+            <div class="category-card-image category-electronics" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#1565c0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <p class="category-card-label">Electronics</p>
+          </a>
+
+          <a href="#" class="category-card" aria-label="Shop Fashion">
+            <div class="category-card-image category-fashion" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#c62828" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.38 3.46L16 2a4 4 0 01-8 0L3.62 3.46a2 2 0 00-1.34 2.23l.58 3.57a1 1 0 00.99.86H6v10c0 1.1.9 2 2 2h8a2 2 0 002-2V10h2.15a1 1 0 00.99-.86l.58-3.57a2 2 0 00-1.34-2.23z"/></svg>
+            </div>
+            <p class="category-card-label">Fashion</p>
+          </a>
+
+          <a href="#" class="category-card" aria-label="Shop Home Decor">
+            <div class="category-card-image category-home" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#e65100" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <p class="category-card-label">Home Decor</p>
+          </a>
+
+          <a href="#" class="category-card" aria-label="Shop Appliances">
+            <div class="category-card-image category-appliances" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#2e7d32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+            </div>
+            <p class="category-card-label">Appliances</p>
+          </a>
+
+          <a href="#" class="category-card" aria-label="Shop Grocery">
+            <div class="category-card-image category-grocery" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#6a1b9a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            </div>
+            <p class="category-card-label">Grocery</p>
+          </a>
+
+          <a href="#" class="category-card" aria-label="Shop Toys and Games">
+            <div class="category-card-image category-toys" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#00838f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+            </div>
+            <p class="category-card-label">Toys &amp; Games</p>
+          </a>
+
+        </div>
+      </section>
+
+
+      <!-- ----------------------------------------------------------
+           CART SECTION (hidden by default)
            ---------------------------------------------------------- -->
       <section id="cart-section" class="section cart-section" aria-labelledby="cart-heading" hidden>
         <h2 class="section-title" id="cart-heading">Your Cart</h2>
@@ -655,7 +897,6 @@
       <div class="container">
         <div class="footer-grid">
 
-          <!-- About column -->
           <div class="footer-col">
             <h3 class="footer-col-heading">About</h3>
             <ul class="footer-links" role="list">
@@ -666,7 +907,6 @@
             </ul>
           </div>
 
-          <!-- Help column -->
           <div class="footer-col">
             <h3 class="footer-col-heading">Help</h3>
             <ul class="footer-links" role="list">
@@ -678,7 +918,6 @@
             </ul>
           </div>
 
-          <!-- Policy column -->
           <div class="footer-col">
             <h3 class="footer-col-heading">Policy</h3>
             <ul class="footer-links" role="list">
@@ -690,7 +929,6 @@
             </ul>
           </div>
 
-          <!-- Social & Apps column -->
           <div class="footer-col">
             <h3 class="footer-col-heading">Social</h3>
             <ul class="footer-links" role="list">
@@ -701,7 +939,6 @@
             </ul>
           </div>
 
-          <!-- Seller column -->
           <div class="footer-col">
             <h3 class="footer-col-heading">Sell on FestiveKart</h3>
             <ul class="footer-links" role="list">
@@ -712,9 +949,9 @@
             </ul>
           </div>
 
-        </div><!-- /footer-grid -->
+        </div>
       </div>
-    </div><!-- /footer-top -->
+    </div>
 
     <div class="footer-bottom">
       <div class="container">
@@ -722,21 +959,13 @@
           <p class="footer-brand">
             <span class="footer-logo-text">Festive<span class="footer-logo-accent">Kart</span></span>
           </p>
-          <p class="footer-copy">
-            &copy; 2026 FestiveKart. All rights reserved.
-          </p>
-          <p class="footer-registered">
-            Registered Office: FestiveKart Pvt. Ltd., Mumbai, Maharashtra, India.
-          </p>
+          <p class="footer-copy">&copy; 2026 FestiveKart. All rights reserved.</p>
+          <p class="footer-registered">Registered Office: FestiveKart Pvt. Ltd., Mumbai, Maharashtra, India.</p>
         </div>
       </div>
-    </div><!-- /footer-bottom -->
-
+    </div>
   </footer>
 
-
-  <!-- Main JavaScript -->
   <script src="script.js"></script>
-
 </body>
 </html>

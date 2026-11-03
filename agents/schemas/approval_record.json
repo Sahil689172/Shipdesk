@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Approval Record",
+  "description": "Machine-verifiable client approval bound to a specific task, PR and commit SHA. A plain Discord message is NOT an approval record.",
+  "type": "object",
+  "required": [
+    "task_id", "pull_request_number", "commit_sha",
+    "qa_status", "qa_commit_sha", "client_id",
+    "client_approval", "approval_timestamp", "deployment_status"
+  ],
+  "properties": {
+    "task_id": { "type": "string", "pattern": "^SD-[0-9]{3,}$" },
+    "pull_request_number": { "type": "integer", "minimum": 1 },
+    "commit_sha": {
+      "type": "string",
+      "minLength": 40,
+      "maxLength": 40,
+      "description": "The exact commit SHA the client reviewed and approved"
+    },
+    "qa_status": {
+      "type": "string",
+      "enum": ["passed", "failed", "pending"],
+      "description": "QA status at time of approval"
+    },
+    "qa_commit_sha": {
+      "type": "string",
+      "minLength": 40,
+      "maxLength": 40,
+      "description": "Commit SHA the QA report covered"
+    },
+    "client_id": {
+      "type": "string",
+      "description": "Authenticated client identity — not a Discord display name"
+    },
+    "client_approval": {
+      "type": "boolean",
+      "description": "true = approved, false = rejected"
+    },
+    "approval_timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of the authenticated approval"
+    },
+    "deployment_status": {
+      "type": "string",
+      "enum": ["pending", "deploying", "deployed", "failed", "blocked"]
+    },
+    "notes": {
+      "type": "string",
+      "description": "Optional client notes or rejection reasons"
+    }
+  },
+  "additionalProperties": false
+}

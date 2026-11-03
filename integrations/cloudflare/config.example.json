@@ -1,0 +1,12 @@
+{
+  "project_name": "shipdesk-festivekart",
+  "account_id": "your-account-id",
+  "production_branch": "main",
+  "build_command": "",
+  "build_output_directory": "/",
+  "framework_preset": "none",
+  "preview_deployments": true,
+  "token_scope": "Pages:Read",
+  "token_note": "The Deploy Agent only needs read access to check deployment status. It does NOT trigger deployments — Cloudflare deploys automatically when a PR merges to main.",
+  "production_domain": "festivekart.pages.dev"
+}

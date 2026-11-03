@@ -1,0 +1,169 @@
+# =============================================================
+# ShipDesk – Switch Room Template
+# Room: shipdesk-client-project
+# =============================================================
+# This file defines the canonical room configuration for the
+# ShipDesk workflow. Import or copy it when creating the room
+# in Switch Console.
+# =============================================================
+
+room:
+  name: shipdesk-client-project
+  description: >
+    ShipDesk production room. Clients submit website change requests here.
+    Intake, Builder, QA and Deploy agents collaborate in this room to take
+    a request from plain-English description to a live production deployment
+    without the client touching code or Git.
+
+  # ------------------------------------------------------------------
+  # PARTICIPANTS
+  # ------------------------------------------------------------------
+  participants:
+    - role: client
+      description: >
+        The website owner. Submits change requests in plain English,
+        reviews preview URLs and approves or rejects proposed changes.
+        Only authenticated clients may approve deployments.
+
+    - role: intake-agent
+      agent: intake
+      description: >
+        Receives client requests, checks for ambiguity, asks clarifying
+        questions when needed and converts the request into a structured
+        Switch task with acceptance criteria.
+
+    - role: builder-agent
+      agent: builder
+      description: >
+        Receives tasks from Intake. Creates a feature branch, edits the
+        website repository, commits, pushes and opens a pull request.
+        Reports the PR URL, branch name and commit SHA back to the room.
+
+    - role: qa-agent
+      agent: qa
+      description: >
+        Independently reviews the Builder's pull request. Checks the diff,
+        verifies acceptance criteria against the preview URL and returns a
+        structured pass/fail report tied to the exact commit SHA.
+
+    - role: deploy-agent
+      agent: deploy
+      description: >
+        Validates QA pass, client identity and approval before merging the
+        pull request. Monitors the Cloudflare Pages deployment and reports
+        the final production URL to the room.
+
+    - role: team
+      description: >
+        Human team members (The Beatles). Can observe all activity, intervene
+        at any stage and override agent decisions when necessary.
+
+  # ------------------------------------------------------------------
+  # INSTRUCTIONS (shared context visible to every agent in the room)
+  # ------------------------------------------------------------------
+  instructions: |
+    ## Project: ShipDesk – FestiveKart Website Maintenance
+
+    ### Website
+    - Production URL:  [set after Cloudflare deployment – update this line]
+    - Repository:      https://github.com/Sahil689172/Shipdesk
+    - Production branch: main
+    - Website folder:  demo-website/
+    - Stack:           Plain HTML, CSS, JavaScript – no build step required
+
+    ### Workflow order
+    1. Client posts a change request in this room (or via Discord bridge).
+    2. Intake Agent structures the request into a task with acceptance criteria.
+    3. Builder Agent creates a feature branch, makes the change, opens a PR.
+    4. QA Agent reviews the PR and preview URL; returns a pass/fail report.
+    5. If QA fails, Builder receives the report and fixes the issues.
+    6. If QA passes, the preview URL is shared with the Client for review.
+    7. Client explicitly approves or rejects the exact PR + commit SHA.
+    8. Deploy Agent validates all conditions and merges the PR.
+    9. Cloudflare Pages deploys main; Deploy Agent posts the production URL.
+
+    ### Branch naming convention
+    feature/SD-{task-id}-{short-description}
+    Example: feature/SD-001-diwali-banner
+
+    ### Task ID format
+    SD-{three-digit-number}
+    Example: SD-001
+
+    ### Important rules
+    - Builder must NOT merge into main directly.
+    - QA must NOT approve its own reviews or use Builder's context.
+    - Deploy must NOT merge without: QA pass + authenticated client approval
+      tied to the exact PR number and commit SHA.
+    - Any new commit after QA or client approval invalidates the prior approval.
+    - Never expose API keys, tokens or credentials in room messages.
+
+  # ------------------------------------------------------------------
+  # TASKS SCHEMA (structure every task must follow)
+  # ------------------------------------------------------------------
+  task_schema:
+    fields:
+      - name: task_id
+        type: string
+        format: "SD-NNN"
+        required: true
+      - name: title
+        type: string
+        required: true
+      - name: requested_by
+        type: string
+        required: true
+      - name: priority
+        type: enum
+        values: [low, medium, high, urgent]
+        required: true
+      - name: requirements
+        type: list
+        required: true
+      - name: acceptance_criteria
+        type: list
+        required: true
+      - name: scope
+        type: string
+        description: Which files/sections are affected
+        required: true
+      - name: out_of_scope
+        type: string
+        required: false
+      - name: status
+        type: enum
+        values: [open, in_progress, in_review, awaiting_approval, approved, deployed, rejected, cancelled]
+        required: true
+
+  # ------------------------------------------------------------------
+  # DECISIONS SCHEMA (approvals / rejections)
+  # ------------------------------------------------------------------
+  decision_schema:
+    fields:
+      - name: task_id
+        type: string
+        required: true
+      - name: pr_number
+        type: integer
+        required: true
+      - name: commit_sha
+        type: string
+        required: true
+      - name: preview_url
+        type: string
+        required: true
+      - name: decision
+        type: enum
+        values: [approved, rejected]
+        required: true
+      - name: decided_by
+        type: string
+        description: Authenticated client identifier
+        required: true
+      - name: timestamp
+        type: string
+        format: ISO 8601
+        required: true
+      - name: notes
+        type: string
+        required: false

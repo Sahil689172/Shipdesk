@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Implementation Report",
+  "description": "Posted by Builder Agent to the Switch room after opening a pull request.",
+  "type": "object",
+  "required": [
+    "task_id", "branch", "commit_sha", "pr_url", "pr_number",
+    "files_changed", "summary", "self_check", "posted_at"
+  ],
+  "properties": {
+    "task_id": { "type": "string", "pattern": "^SD-[0-9]{3,}$" },
+    "branch": {
+      "type": "string",
+      "pattern": "^feature/SD-[0-9]{3,}-.*$",
+      "description": "Feature branch name e.g. feature/SD-001-diwali-banner"
+    },
+    "commit_sha": {
+      "type": "string",
+      "minLength": 40,
+      "maxLength": 40,
+      "description": "Full 40-character commit SHA"
+    },
+    "pr_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "GitHub pull request URL"
+    },
+    "pr_number": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "GitHub pull request number"
+    },
+    "preview_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Cloudflare Pages preview URL (available a few minutes after push)"
+    },
+    "files_changed": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["file", "description"],
+        "properties": {
+          "file": { "type": "string" },
+          "description": { "type": "string" }
+        }
+      },
+      "minItems": 1
+    },
+    "summary": {
+      "type": "string",
+      "description": "2-3 sentence summary of what was done and why"
+    },
+    "self_check": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["criterion", "result", "evidence"],
+        "properties": {
+          "criterion": { "type": "string" },
+          "result": { "type": "string", "enum": ["pass", "fail"] },
+          "evidence": { "type": "string" }
+        }
+      },
+      "minItems": 1
+    },
+    "posted_at": { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}

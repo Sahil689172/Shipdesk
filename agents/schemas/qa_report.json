@@ -1,0 +1,107 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "QA Report",
+  "description": "Posted by QA Agent after independently reviewing a pull request. Valid only for the reviewed commit SHA.",
+  "type": "object",
+  "required": [
+    "task_id", "pr_number", "pr_url", "reviewed_commit_sha",
+    "preview_url", "criteria_results", "scope_check", "regression_check",
+    "defects", "verdict", "posted_at"
+  ],
+  "properties": {
+    "task_id": { "type": "string", "pattern": "^SD-[0-9]{3,}$" },
+    "pr_number": { "type": "integer", "minimum": 1 },
+    "pr_url": { "type": "string", "format": "uri" },
+    "reviewed_commit_sha": {
+      "type": "string",
+      "minLength": 40,
+      "maxLength": 40,
+      "description": "Full 40-character commit SHA this report covers"
+    },
+    "preview_url": { "type": "string", "format": "uri" },
+    "criteria_results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["criterion", "result", "evidence"],
+        "properties": {
+          "criterion": { "type": "string" },
+          "result": { "type": "string", "enum": ["pass", "fail"] },
+          "evidence": { "type": "string", "description": "Specific observation, not 'looks good'" }
+        }
+      },
+      "minItems": 1
+    },
+    "scope_check": {
+      "type": "object",
+      "required": ["files_changed", "changes_outside_scope"],
+      "properties": {
+        "files_changed": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "changes_outside_scope": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Empty array if none found"
+        }
+      }
+    },
+    "regression_check": {
+      "type": "object",
+      "required": ["desktop_1280", "mobile_375", "console_errors", "broken_images"],
+      "properties": {
+        "desktop_1280": {
+          "type": "object",
+          "required": ["result", "observation"],
+          "properties": {
+            "result": { "type": "string", "enum": ["pass", "fail"] },
+            "observation": { "type": "string" }
+          }
+        },
+        "mobile_375": {
+          "type": "object",
+          "required": ["result", "observation"],
+          "properties": {
+            "result": { "type": "string", "enum": ["pass", "fail"] },
+            "observation": { "type": "string" }
+          }
+        },
+        "console_errors": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Empty array if none found"
+        },
+        "broken_images": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Empty array if none found"
+        }
+      }
+    },
+    "defects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["description"],
+        "properties": {
+          "file": { "type": "string", "description": "File and line reference if applicable" },
+          "description": { "type": "string" },
+          "severity": { "type": "string", "enum": ["critical", "major", "minor"] }
+        }
+      },
+      "description": "Empty array if no defects"
+    },
+    "verdict": {
+      "type": "string",
+      "enum": ["QA_PASS", "QA_FAIL"]
+    },
+    "required_fixes": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Present only when verdict is QA_FAIL"
+    },
+    "posted_at": { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}

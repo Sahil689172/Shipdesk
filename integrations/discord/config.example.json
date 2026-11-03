@@ -1,0 +1,11 @@
+{
+  "server_name": "ShipDesk Workspace",
+  "request_channel": "client-requests",
+  "bridge_type": "switch-discord-bridge",
+  "token_note": "Discord configuration is used in Phase 5 to bridge the Switch room to a Discord channel. Do not build a standalone Discord bot — use the official Switch Discord bridge.",
+  "identity_mapping": {
+    "note": "Map Discord user IDs to authenticated client identities. Only users listed in AUTHENTICATED_CLIENT_IDS can approve deployments.",
+    "client_roles": ["client-approver"],
+    "agent_roles": ["intake-agent", "builder-agent", "qa-agent", "deploy-agent"]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "repository": "Sahil689172/Shipdesk",
+  "production_branch": "main",
+  "branch_prefix": "feature/SD-",
+  "token_scope": "repo:pull, repo:status",
+  "deploy_token_scope": "repo:merge",
+  "token_note": "Use a fine-grained PAT scoped to this repo only. The Builder token needs read+write to branches but NOT merge. The Deploy token needs merge capability on approved PRs only. Never use a full-scope personal token.",
+  "pr_template": {
+    "title_format": "SD-NNN: short description",
+    "body_sections": ["summary", "files_changed", "self_check", "acceptance_criteria_mapping"],
+    "labels": ["shipdesk"]
+  }
+}

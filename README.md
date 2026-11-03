@@ -47,12 +47,25 @@ Updated live website + completion notice in room
 Shipdesk/
 │
 ├── agents/
-│   ├── intake/                  # Intake Agent (Python/Node – Phase 4)
+│   ├── intake/                  # Intake Agent (Python)
+│   │   ├── main.py              # SSE listener, LLM interaction, task creation
+│   │   ├── prompts.py           # LLM system + extraction + clarification prompts
+│   │   └── __init__.py
 │   ├── builder/
 │   │   └── opencode-instructions.md   # Builder's OpenCode system prompt
 │   ├── qa/
 │   │   └── opencode-instructions.md   # QA's OpenCode system prompt
-│   └── deploy/                  # Deploy Agent (Python/Node – Phase 4)
+│   ├── deploy/                  # Deploy Agent (Python)
+│   │   ├── main.py              # SSE listener, validation, merge, deploy monitor
+│   │   ├── approval.py          # 9-check pre-deployment validation
+│   │   ├── github_merge.py      # GitHub PR merge via scoped token
+│   │   └── __init__.py
+│   └── schemas/                 # JSON schemas for all agent handoffs
+│       ├── task.json
+│       ├── implementation_report.json
+│       ├── qa_report.json
+│       ├── approval_record.json
+│       └── README.md
 │
 ├── switch/
 │   ├── room-template.yaml       # Switch room config (participants, schema)
@@ -65,9 +78,9 @@ Shipdesk/
 │       └── deploy.yaml          # Deploy Agent Switch config
 │
 ├── integrations/
-│   ├── github/                  # GitHub token config (Phase 4)
-│   ├── cloudflare/              # Cloudflare Pages config (Phase 4)
-│   └── discord/                 # Discord bridge config (Phase 5)
+│   ├── github/config.example.json    # GitHub token scopes, PR template
+│   ├── cloudflare/config.example.json # Cloudflare Pages config
+│   └── discord/config.example.json   # Discord bridge config (Phase 5)
 │
 ├── demo-website/        # Demo website (FestiveKart)
 │   ├── index.html
@@ -108,8 +121,8 @@ Shipdesk/
 | 1 | Build and deploy the FestiveKart demo website | ✅ Complete |
 | 2 | GitHub workflow, pull requests and preview deployments | ✅ Complete |
 | 3 | Install and configure Switch | ✅ Structure complete – follow `switch/SETUP.md` |
-| 4 | Build and configure the four agents | 🔲 Next |
-| 5 | Connect Discord to Switch | 🔲 Pending |
+| 4 | Build and configure the four agents | ✅ Complete |
+| 5 | Connect Discord to Switch | 🔲 Next |
 | 6 | Integrate the end-to-end workflow | 🔲 Pending |
 | 7 | Security, testing and reliability | 🔲 Pending |
 | 8 | Documentation, demo video and submission | 🔲 Pending |

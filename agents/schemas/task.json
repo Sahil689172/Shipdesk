@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ShipDesk Task",
+  "description": "Structured task created by the Intake Agent and consumed by all downstream agents.",
+  "type": "object",
+  "required": [
+    "task_id", "title", "requested_by", "priority", "status",
+    "scope", "out_of_scope", "requirements", "acceptance_criteria", "created_at"
+  ],
+  "properties": {
+    "task_id": {
+      "type": "string",
+      "pattern": "^SD-[0-9]{3,}$",
+      "description": "Unique task identifier e.g. SD-001"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 100,
+      "description": "Short imperative title describing the change"
+    },
+    "requested_by": {
+      "type": "string",
+      "description": "Authenticated client name or Discord handle"
+    },
+    "priority": {
+      "type": "string",
+      "enum": ["low", "medium", "high", "urgent"]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "open", "assigned", "in_progress", "pr_open",
+        "qa_in_progress", "qa_failed", "qa_passed",
+        "awaiting_client_review", "client_approved", "client_rejected",
+        "deploying", "deployed", "blocked", "cancelled"
+      ]
+    },
+    "scope": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "description": "Files and sections affected by this task"
+    },
+    "out_of_scope": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Files or sections that must not be changed"
+    },
+    "requirements": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "description": "Plain-English requirements extracted from the client request"
+    },
+    "acceptance_criteria": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "description": "Specific, testable criteria that define done"
+    },
+    "clarifications": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["question", "answer"],
+        "properties": {
+          "question": { "type": "string" },
+          "answer": { "type": "string" }
+        }
+      },
+      "description": "Q&A exchange between Intake and the client before task creation"
+    },
+    "assigned_to": {
+      "type": "string",
+      "description": "Agent currently assigned e.g. builder or qa"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": false
+}

@@ -68,7 +68,7 @@ room:
     - Production URL:  [set after Cloudflare deployment – update this line]
     - Repository:      https://github.com/Sahil689172/Shipdesk
     - Production branch: main
-    - Website folder:  shipdesk-festivekart/
+    - Website folder:  demo-website/
     - Stack:           Plain HTML, CSS, JavaScript – no build step required
 
     ### Workflow order

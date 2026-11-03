@@ -14,14 +14,14 @@ framework. Every change is a direct edit to source files.
 | Item | Value |
 |------|-------|
 | Repository | https://github.com/Sahil689172/Shipdesk |
-| Website folder | `shipdesk-festivekart/` |
-| Entry point | `shipdesk-festivekart/index.html` |
-| Styles | `shipdesk-festivekart/style.css` |
-| Scripts | `shipdesk-festivekart/script.js` |
-| Design system | `shipdesk-festivekart/DESIGN.md` – read this before any visual change |
-| Product images | `shipdesk-festivekart/assets/images/products/` |
-| Banner images | `shipdesk-festivekart/assets/images/banners/` |
-| Brand logos | `shipdesk-festivekart/assets/images/brand/` |
+| Website folder | `demo-website/` |
+| Entry point | `demo-website/index.html` |
+| Styles | `demo-website/style.css` |
+| Scripts | `demo-website/script.js` |
+| Design system | `demo-website/DESIGN.md` – read this before any visual change |
+| Product images | `demo-website/assets/images/products/` |
+| Banner images | `demo-website/assets/images/banners/` |
+| Brand logos | `demo-website/assets/images/brand/` |
 | Production branch | `main` |
 
 ---
@@ -56,8 +56,8 @@ git checkout -b feature/SD-NNN-short-description
 # (edit only files within task scope)
 
 # 4. Stage specific files – never git add .
-git add shipdesk-festivekart/index.html
-git add shipdesk-festivekart/style.css
+git add demo-website/index.html
+git add demo-website/style.css
 # etc.
 
 # 5. Commit with task ID prefix
@@ -112,7 +112,7 @@ git push origin feature/SD-NNN-short-description
 
 Run through every acceptance criterion from the task and record your result:
 
-- [ ] Open `shipdesk-festivekart/index.html` in a browser.
+- [ ] Open `demo-website/index.html` in a browser.
 - [ ] Verify each acceptance criterion visually at 1280px (desktop).
 - [ ] Verify each acceptance criterion visually at 375px (mobile – use browser DevTools).
 - [ ] Check the browser console for JavaScript errors.
@@ -134,8 +134,8 @@ PR Number:      #NNN
 Preview URL:    [Cloudflare preview URL – available a few minutes after push]
 
 Files changed:
-- shipdesk-festivekart/index.html  – [what changed]
-- shipdesk-festivekart/style.css   – [what changed]
+- demo-website/index.html  – [what changed]
+- demo-website/style.css   – [what changed]
 
 Summary:
 [2–3 sentences: what was done, why, and how it satisfies the task]

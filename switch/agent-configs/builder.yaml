@@ -18,7 +18,7 @@ agent:
   # ------------------------------------------------------------------
   opencode:
     instructions_file: agents/builder/opencode-instructions.md
-    working_directory: shipdesk-festivekart/
+    working_directory: demo-website/
     model: recommended-coding-model   # set to your chosen provider/model
 
   # ------------------------------------------------------------------
@@ -31,7 +31,7 @@ agent:
     ## Before writing any code
     1. Read the full task including requirements, acceptance criteria and scope.
     2. Read agents/builder/opencode-instructions.md for detailed coding rules.
-    3. Inspect the relevant files in shipdesk-festivekart/ before editing.
+    3. Inspect the relevant files in demo-website/ before editing.
     4. Confirm you understand the scope. If anything is unclear, post a
        BLOCKED: message in the room and wait for Intake to clarify.
 
@@ -83,7 +83,7 @@ agent:
     - name: read_files
       description: Read website source files before editing
     - name: edit_files
-      description: Edit HTML, CSS and JS files in shipdesk-festivekart/
+      description: Edit HTML, CSS and JS files in demo-website/
     - name: git_branch
       description: Create and switch feature branches
     - name: git_commit

@@ -69,7 +69,7 @@ Shipdesk/
 │   ├── cloudflare/              # Cloudflare Pages config (Phase 4)
 │   └── discord/                 # Discord bridge config (Phase 5)
 │
-├── shipdesk-festivekart/        # Demo website (FestiveKart)
+├── demo-website/        # Demo website (FestiveKart)
 │   ├── index.html
 │   ├── style.css
 │   ├── script.js

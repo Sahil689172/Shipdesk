@@ -18,7 +18,7 @@ agent:
   # ------------------------------------------------------------------
   opencode:
     instructions_file: agents/qa/opencode-instructions.md
-    working_directory: shipdesk-festivekart/
+    working_directory: demo-website/
     model: recommended-review-model   # use a DIFFERENT model from Builder
 
   # ------------------------------------------------------------------

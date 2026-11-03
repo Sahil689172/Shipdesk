@@ -94,7 +94,7 @@ Builder uses OpenCode with access to the repo. Set up its configuration:
    prompt file.
 2. In OpenCode's config, set:
    - Instructions file: `agents/builder/opencode-instructions.md`
-   - Working directory: `shipdesk-festivekart/`
+   - Working directory: `demo-website/`
    - Model: your chosen provider (Gemini, Claude, GPT-4o, etc.)
 3. Give Builder a GitHub token with these permissions only:
    - `contents: write` (for pushing branches)
@@ -112,7 +112,7 @@ Using the same model risks QA simply agreeing with Builder. Independence matters
 1. Copy `agents/qa/opencode-instructions.md` – this is QA's system prompt file.
 2. In OpenCode's config for the QA instance, set:
    - Instructions file: `agents/qa/opencode-instructions.md`
-   - Working directory: `shipdesk-festivekart/`
+   - Working directory: `demo-website/`
    - Model: a different model than Builder's (e.g. if Builder uses Claude,
      QA uses Gemini, or vice versa)
 3. Give QA a GitHub token with read-only PR permissions only:
@@ -182,8 +182,8 @@ by reading the file directly – not by referencing any Builder message.
 - [ ] OpenCode (Builder) is connected to the room and responds to messages
 - [ ] OpenCode (QA) is connected with a different model and responds independently
 - [ ] Room `shipdesk-client-project` exists with the project instructions loaded
-- [ ] Builder can read files from `shipdesk-festivekart/`
-- [ ] QA can read files from `shipdesk-festivekart/`
+- [ ] Builder can read files from `demo-website/`
+- [ ] QA can read files from `demo-website/`
 
 Once all boxes are checked, proceed to **Phase 4 – Build the Four Agents**.
 

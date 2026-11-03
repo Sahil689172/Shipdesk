@@ -23,9 +23,9 @@ A `QA FAIL` from you tells Builder exactly what is wrong and what must be fixed.
 | Item | Value |
 |------|-------|
 | Repository | https://github.com/Sahil689172/Shipdesk |
-| Website folder | `shipdesk-festivekart/` |
+| Website folder | `demo-website/` |
 | Stack | Plain HTML, CSS, JavaScript – no build step |
-| Design system | `shipdesk-festivekart/DESIGN.md` |
+| Design system | `demo-website/DESIGN.md` |
 | Production branch | `main` |
 
 ---
